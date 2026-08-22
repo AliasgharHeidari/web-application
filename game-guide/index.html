@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0d0e12"
+    >
+
+    <title>Game Guide</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ======================================================
+         HEADER
+    ======================================================= -->
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="icon-button"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <div class="brand">
+
+            <span class="brand-mark">◆</span>
+
+            <span>GAME GUIDE</span>
+
+        </div>
+
+
+        <button
+            id="headerSearchButton"
+            class="icon-button"
+            aria-label="Search"
+        >
+            ⌕
+        </button>
+
+    </header>
+
+
+
+    <!-- ======================================================
+         SIDE MENU
+    ======================================================= -->
+
+    <div
+        id="menuOverlay"
+        class="menu-overlay"
+    ></div>
+
+
+    <aside
+        id="sideMenu"
+        class="side-menu"
+    >
+
+        <div class="menu-header">
+
+            <div class="menu-brand">
+
+                <span class="brand-mark">
+                    ◆
+                </span>
+
+                <span>
+                    GAME GUIDE
+                </span>
+
+            </div>
+
+
+            <button
+                id="closeMenu"
+                class="icon-button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <nav class="menu-links">
+
+
+            <button
+                class="menu-link active"
+                data-menu="home"
+            >
+
+                <span>⌂</span>
+
+                <span>Home</span>
+
+            </button>
+
+
+            <button
+                class="menu-link"
+                data-menu="categories"
+            >
+
+                <span>▦</span>
+
+                <span>Categories</span>
+
+            </button>
+
+
+            <button
+                class="menu-link"
+                data-menu="guides"
+            >
+
+                <span>☰</span>
+
+                <span>All Guides</span>
+
+            </button>
+
+
+            <div class="menu-divider"></div>
+
+
+            <button
+                class="menu-link"
+                data-menu="about"
+            >
+
+                <span>ⓘ</span>
+
+                <span>About</span>
+
+            </button>
+
+
+            <button
+                class="menu-link"
+                data-menu="settings"
+            >
+
+                <span>⚙</span>
+
+                <span>Settings</span>
+
+            </button>
+
+
+        </nav>
+
+
+        <div class="menu-footer">
+
+            <span>GAME GUIDE</span>
+
+            <span>v1.0.0</span>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ======================================================
+         MAIN
+    ======================================================= -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HOME
+        =================================================== -->
+
+        <section
+            id="homePage"
+            class="page active"
+        >
+
+            <div class="home-content">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="Search the guide..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        id="clearSearch"
+                        class="clear-search"
+                        aria-label="Clear search"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <!-- SEARCH RESULTS -->
+
+                <div
+                    id="searchResults"
+                    class="search-results hidden"
+                >
+
+                    <div class="section-header">
+
+                        <h2>
+                            Search results
+                        </h2>
+
+                        <span
+                            id="resultCount"
+                            class="muted"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="resultsGrid"
+                        class="card-grid"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- NORMAL HOME -->
+
+                <div id="normalHome">
+
+
+                    <!-- CATEGORIES -->
+
+                    <section class="section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                Categories
+                            </h2>
+
+                            <button
+                                class="text-button"
+                                id="categoriesViewAll"
+                            >
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="categories"
+                            class="category-grid"
+                        ></div>
+
+                    </section>
+
+
+
+                    <!-- FEATURED -->
+
+                    <section class="section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                Featured
+                            </h2>
+
+                            <button
+                                class="text-button"
+                                id="viewAllButton"
+                            >
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="featured"
+                            class="card-grid"
+                        ></div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CATEGORY PAGE
+        =================================================== -->
+
+        <section
+            id="categoryPage"
+            class="page"
+        >
+
+            <div class="page-content">
+
+
+                <button
+                    id="categoryBackButton"
+                    class="back-button"
+                >
+                    ← Back
+                </button>
+
+
+                <div class="page-heading">
+
+                    <span
+                        id="categoryEyebrow"
+                        class="eyebrow"
+                    >
+                        CATEGORY
+                    </span>
+
+
+                    <h1 id="categoryTitle">
+                        Category
+                    </h1>
+
+                </div>
+
+
+                <div
+                    id="categoryItems"
+                    class="card-grid"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ALL GUIDES
+        =================================================== -->
+
+        <section
+            id="allPage"
+            class="page"
+        >
+
+            <div class="page-content">
+
+
+                <div class="page-heading">
+
+                    <span class="eyebrow">
+                        GUIDE
+                    </span>
+
+
+                    <h1>
+                        All Guides
+                    </h1>
+
+                </div>
+
+
+                <div
+                    id="allArticles"
+                    class="card-grid"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DETAIL
+        =================================================== -->
+
+        <section
+            id="detailPage"
+            class="page"
+        >
+
+            <div class="detail-page">
+
+
+                <button
+                    id="backButton"
+                    class="back-button"
+                >
+                    ← Back
+                </button>
+
+
+                <div id="detailContent"></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ABOUT
+        =================================================== -->
+
+        <section
+            id="aboutPage"
+            class="page"
+        >
+
+            <div class="page-content">
+
+                <div class="page-heading">
+
+                    <span class="eyebrow">
+                        INFORMATION
+                    </span>
+
+                    <h1>
+                        About
+                    </h1>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        ◆
+                    </div>
+
+
+                    <h2>
+                        Game Guide
+                    </h2>
+
+
+                    <p>
+                        A simple offline guide designed to
+                        help you quickly find information
+                        about the game.
+                    </p>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Version
+                        </span>
+
+                        <strong>
+                            1.0.0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Content
+                        </span>
+
+                        <strong>
+                            Offline
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SETTINGS
+        =================================================== -->
+
+        <section
+            id="settingsPage"
+            class="page"
+        >
+
+            <div class="page-content">
+
+                <div class="page-heading">
+
+                    <span class="eyebrow">
+                        APP
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+
+                <div class="settings-list">
+
+
+                    <div class="setting">
+
+                        <div>
+
+                            <strong>
+                                Dark Mode
+                            </strong>
+
+                            <span>
+                                Use the dark interface
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                id="darkModeToggle"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <div class="setting">
+
+                        <div>
+
+                            <strong>
+                                Animations
+                            </strong>
+
+                            <span>
+                                Enable interface animations
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                id="animationToggle"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ======================================================
+         BOTTOM NAV
+    ======================================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <button
+            class="nav-item active"
+            data-page="home"
+        >
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-page="categories"
+        >
+
+            <span class="nav-icon">
+                ▦
+            </span>
+
+            <span>
+                Categories
+            </span>
+
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-page="guides"
+        >
+
+            <span class="nav-icon">
+                ☰
+            </span>
+
+            <span>
+                Guides
+            </span>
+
+        </button>
+
+
+    </nav>
+
+
+    <!-- ======================================================
+     INTRO VIDEO
+======================================================= -->
+
+<div id="introScreen" class="intro-screen">
+
+    <video
+        id="introVideo"
+        class="intro-video"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+    >
+        <source src="videos/output.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="intro-overlay"></div>
+
+
+    <div class="intro-content">
+
+        <div class="intro-title">
+            GTA V Guide
+        </div>
+
+        <div class="intro-loading" style="font-size: small;">
+           در حال آماده سازی
+        </div>
+
+    </div>
+
+
+    <button
+        id="skipIntro"
+        class="skip-intro"
+    >
+        Skip
+    </button>
+
+</div>
+
+</div>
+
+
+<script src="js/data.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
