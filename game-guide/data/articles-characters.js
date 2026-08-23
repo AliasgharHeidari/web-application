@@ -1,368 +1,4 @@
-const categories = [
-  {
-    id: "mysteries",
-    title: "رازها و مکان‌های عجیب",
-    description: "کشف اسرار و مکان‌های مرموز بازی GTA V",
-    icon: "◉",
-  },
-  {
-    id: "map",
-    title: "نقشه کامل",
-    description: "نقشه جامع بازی با تمام مکان‌های مهم و رازآلود",
-    icon: "",
-  },
-  {
-    id: "cheats",
-    title: "کدها و رمزهای GTA V",
-    description: "همه کدهای بازی GTA V برای کامپیوتر و گوشی",
-    icon: "⌨️",
-  },
-  {
-    id: "characters",
-    title: "شخصیت‌های اصلی بازی GTA V",
-    description: "معرفی کامل و بررسی شخصیت‌های اصلی و فرعی داستان GTA V",
-    icon: "👤",
-  },
-];
-
-const articles = [
-  /* ======================================================
-       GTA V MYSTERIES
-    ======================================================= */
-
-  {
-    id: 1,
-    category: "mysteries",
-    title: "UFO کوه Chiliad - بزرگ‌ترین راز GTA V",
-    images: [
-      "images/mys/chiliad-ufo-2.jpeg",
-      "images/mys/chiliad-ufo.jpeg",
-      "images/mys/chiliad-map.jpeg",
-    ],
-    description: "مشهورترین راز GTA V؛ یک سفینه فضایی که در شرایط خاص بالای Mount Chiliad ظاهر می‌شود.",
-    sections: [
-      {
-        title: "مکان",
-        text: "این UFO در بالاترین نقطه Mount Chiliad در شمال Blaine County دیده می‌شود. کنار ایستگاه تله‌کابین، نقاشی معروف Chiliad Mystery قرار دارد."
-      },
-      {
-        title: "چگونه آن را ببینیم؟",
-        text: "برای مشاهده باید بازی را ۱۰۰٪ کامل کرده باشید. ساعت باید حدود ۳ صبح باشد و هوا طوفانی باشد. در این شرایط یک UFO با نور سبز بالای کوه ظاهر می‌شود."
-      },
-      {
-        title: "راز پشت آن",
-        text: "نقاشی روی کوه شامل سه نماد UFO، تخم فضایی و جت‌پک است و سال‌ها باعث شکل گرفتن تئوری‌های زیادی درباره رازهای حذف‌شده GTA V شده است."
-      }
-    ]
-  },
-
-  {
-    id: 2,
-    category: "mysteries",
-    title: "روح دختر Mount Gordo",
-    images: [
-      "images/mys/mount-gordo-ghost.jpeg",
-      "images/mys/mount-gordo-ghost-2.jpeg",
-      "images/mys/mount-gordo-location.jpeg",
-    ],
-    description: "یکی از ترسناک‌ترین Easter Egg های GTA V؛ روح دختری که نیمه‌شب روی کوه ظاهر می‌شود.",
-    sections: [
-      {
-        title: "مکان",
-        text: "در Mount Gordo نزدیک کمپ کوچک کنار کوه، بالای صخره‌ها می‌توان این روح را پیدا کرد."
-      },
-      {
-        title: "زمان مشاهده",
-        text: "روح فقط بین ساعت ۲۳:۰۰ تا ۰۰:۰۰ شب ظاهر می‌شود. اگر نزدیک شوید ناپدید می‌شود."
-      },
-      {
-        title: "داستان",
-        text: "این روح مربوط به Jolene Cranley-Evans است؛ همسر John Cranley که طبق داستان بازی از بالای کوه سقوط کرده است. روی زمین نوشته خونینی با نام JOCK دیده می‌شود."
-      }
-    ]
-  },
-
-  {
-    id: 3,
-    category: "mysteries",
-    title: "UFO زیر آب در Paleto Bay",
-    images: [
-      "images/mys/underwater-ufo.jpeg",
-      "images/mys/underwater-ufo-2.jpeg",
-      "images/mys/underwater-ufo-map.jpeg",
-    ],
-    description: "یک سفینه فضایی غرق شده در اعماق اقیانوس شمال نقشه GTA V.",
-    sections: [
-      {
-        title: "مکان",
-        text: "در شمال Paleto Bay و کف اقیانوس یک سفینه بزرگ سقوط کرده پیدا می‌شود."
-      },
-      {
-        title: "چگونه پیدا کنیم؟",
-        text: "با زیردریایی یا لباس غواصی به عمق اقیانوس بروید. بدنه سفینه بین گیاهان دریایی قرار گرفته است."
-      },
-      {
-        title: "نکته جالب",
-        text: "این یکی از معدود UFO هایی است که بدون تمام کردن کامل بازی قابل مشاهده است."
-      }
-    ]
-  },
-
-  {
-    id: 4,
-    category: "mysteries",
-    title: "UFO پایگاه نظامی Fort Zancudo",
-    images: [
-      "images/mys/fort-zancudo-ufo.jpeg",
-      "images/mys/fort-zancudo-base.jpeg",
-      "images/mys/fort-zancudo-map.jpeg",
-    ],
-    description: "یک UFO مرموز که بالای پایگاه نظامی Fort Zancudo ظاهر می‌شود.",
-    sections: [
-      {
-        title: "مکان",
-        text: "در Fort Zancudo، پایگاه نظامی بزرگ غرب نقشه قرار دارد."
-      },
-      {
-        title: "روش پیدا کردن",
-        text: "بعد از کامل کردن بازی، در ساعت ۳ صبح و شرایط خاص آب‌وهوایی می‌توان سفینه را بالای پایگاه مشاهده کرد."
-      },
-      {
-        title: "نظریه‌ها",
-        text: "بازیکنان معتقدند دولت GTA V یعنی FIB و ارتش روی تکنولوژی فضایی تحقیق می‌کنند."
-      }
-    ]
-  },
-
-  {
-    id: 10,
-    category: "mysteries",
-    title: "فضایی یخ‌زده",
-    images: ["images/mys/frozen-alien.jpeg", "images/mys/frozen-alien-2.jpeg"],
-    description: "یک موجود فضایی که زیر یخ‌های North Yankton پنهان شده و در ابتدای بازی می‌توان آن را دید.",
-    sections: [
-      {
-        title: "کجاست؟",
-        text: "در North Yankton، در جریان بخش ابتدایی بازی و اطراف رودخانه یخ‌زده."
-      },
-      {
-        title: "چه چیزی می‌بینی؟",
-        text: "اگر هنگام فرار از مسیر اصلی خارج شوی و به سمت رودخانه بروی، می‌توانی موجودی شبیه Alien را زیر سطح یخ مشاهده کنی."
-      },
-      {
-        title: "چطور پیدایش کنم؟",
-        text: "در ابتدای بازی، هنگام فرار با ماشین، از مسیر اصلی فاصله بگیر و به سمت رودخانه یخ‌زده برو. قبل از ادامه دادن مأموریت، زیر یخ‌ها را نگاه کن."
-      },
-      {
-        title: "نکته",
-        text: "این راز خیلی راحت از دست می‌رود چون بازی هیچ علامتی روی نقشه برای آن نشان نمی‌دهد."
-      }
-    ]
-  },
-
-  {
-    id: 11,
-    category: "mysteries",
-    title: "پاگنده",
-    images: [
-      "images/mys/bigfoot-1.jpeg",
-      "images/mys/bigfoot.jpeg",
-      "images/mys/bigfoot-map.jpeg",
-    ],
-    description: "موجود افسانه‌ای معروفی که در یکی از مأموریت‌های GTA V برای چند لحظه میان درختان دیده می‌شود.",
-    sections: [
-      {
-        title: "کجاست؟",
-        text: "در مناطق جنگلی اطراف Raton Canyon و Chiliad Mountain State Wilderness."
-      },
-      {
-        title: "چه زمانی می‌توان دید؟",
-        text: "در مأموریت Predator، هنگام جست‌وجوی افراد در جنگل، می‌توان با دوربین حرارتی موجودی شبیه پاگنده را مشاهده کرد."
-      },
-      {
-        title: "چطور پیدایش کنم؟",
-        text: "در مأموریت Predator وقتی به مرحله جست‌وجو در جنگل رسیدی، دوربین حرارتی را فعال کن و بین درختان را نگاه کن. موجود برای مدت کوتاهی دیده می‌شود."
-      },
-      {
-        title: "راز بزرگ‌تر",
-        text: "پاگنده فقط به یک مشاهده کوتاه محدود نمی‌شود و در بخش‌های دیگری از بازی نیز به شکل‌های مختلف به Sasquatch اشاره شده است."
-      }
-    ]
-  },
-
-  {
-    id: 12,
-    category: "mysteries",
-    title: "دریچه مرموز زیر آب",
-    images: [
-      "images/mys/underwater-hatch.jpeg",
-      "images/mys/underwater-hatch-map.jpeg",
-      "images/mys/underwater-hatch-2.jpeg",
-    ],
-    description: "یک دریچه فلزی مرموز در اعماق اقیانوس که سال‌ها باعث شکل‌گیری تئوری‌های مختلف بین بازیکنان شده است.",
-    sections: [
-      {
-        title: "کجاست؟",
-        text: "در قسمت شرقی اقیانوس، نزدیک منطقه San Chianski Mountain Range و اطراف Humane Labs."
-      },
-      {
-        title: "چه چیزی می‌بینی؟",
-        text: "در کف اقیانوس یک دریچه فلزی بزرگ قرار دارد که از داخل آن نور دیده می‌شود."
-      },
-      {
-        title: "چطور به آن برسم؟",
-        text: "با زیردریایی یا تجهیزات غواصی وارد اقیانوس شو و به عمق برو. با جست‌وجوی کف دریا می‌توانی دریچه را پیدا کنی."
-      },
-      {
-        title: "چرا مرموز است؟",
-        text: "دریچه هیچ توضیح واضحی در داستان اصلی بازی ندارد و همین باعث شده بازیکنان تئوری‌های زیادی درباره ارتباط آن با پروژه‌های مخفی و رازهای دیگر بازی مطرح کنند."
-      }
-    ]
-  },
-
-  {
-    id: 13,
-    category: "mysteries",
-    title: "اردوگاه فرقه Altruist",
-    images: ["images/mys/altruist-camp-map.jpeg", "images/mys/altruist-camp.jpeg"],
-    description: "اردوگاه منزوی یک فرقه عجیب در کوهستان که یکی از مرموزترین مکان‌های GTA V است.",
-    sections: [
-      {
-        title: "کجاست؟",
-        text: "در Chiliad Mountain State Wilderness، در بخش کوهستانی شمالی نقشه."
-      },
-      {
-        title: "چه چیزی آنجاست؟",
-        text: "اردوگاه شامل خانه‌های چوبی، ساختمان‌های فرسوده و اعضای فرقه Altruist است که در منطقه‌ای کاملاً دورافتاده زندگی می‌کنند."
-      },
-      {
-        title: "چطور به آن برسم؟",
-        text: "با Trevor به سمت کوهستان‌های شمالی برو و جاده‌های خاکی و مسیرهای کوهستانی را دنبال کن تا به اردوگاه برسی."
-      },
-      {
-        title: "ارتباط با رازهای دیگر",
-        text: "در اطراف این منطقه نمادها و نشانه‌هایی دیده می‌شود که باعث شده بازیکنان آن را با معمای Mount Chiliad و رازهای UFO مرتبط بدانند."
-      }
-    ]
-  },
-
-  {
-    id: 14,
-    category: "mysteries",
-    title: "معدن متروکه",
-    images: [
-      "images/mys/abandoned-mine-2.jpeg",
-      "images/mys/abandoned-mine.jpeg",
-      "images/mys/abandoned-mine-map.jpeg",
-    ],
-    description: "یک معدن قدیمی و تاریک در دل کوه که می‌توان با انفجار وارد آن شد.",
-    sections: [
-      {
-        title: "کجاست؟",
-        text: "در منطقه Great Chaparral، در بخش مرکزی و غربی نقشه."
-      },
-      {
-        title: "چطور وارد شوم؟",
-        text: "ورودی معدن بسته است. برای باز کردن آن باید از مواد منفجره مثل Sticky Bomb استفاده کنی."
-      },
-      {
-        title: "داخل معدن",
-        text: "بعد از باز کردن ورودی می‌توانی وارد تونل‌های تاریک و قدیمی معدن شوی و محیط آن را جست‌وجو کنی."
-      },
-      {
-        title: "پیشنهاد",
-        text: "قبل از ورود چراغ‌قوه داشته باش؛ داخل معدن بسیار تاریک است و فضای آن عمداً حس یک مکان متروکه و مرموز را منتقل می‌کند."
-      }
-    ]
-  },
-
-  {
-    id: 15,
-    category: "mysteries",
-    title: "Beam Me Up - مکان فضایی Sandy Shores",
-    images: [
-      "images/mys/beam-me-up.jpeg",
-      "images/mys/beam-me-up-2.jpeg",
-      "images/mys/beam-me-up-map.jpeg",
-    ],
-    description: "یک سازه عجیب در بیابان که به داستان فضایی GTA V مرتبط است.",
-    sections: [
-      {
-        title: "مکان",
-        text: "در Grand Senora Desert نزدیک Sandy Shores قرار دارد."
-      },
-      {
-        title: "جزئیات",
-        text: "این منطقه یک سازه هنری شبیه محل فرود موجودات فضایی دارد و یکی از نقاط محبوب شکار رازها در GTA V است."
-      },
-      {
-        title: "ارتباط با UFO",
-        text: "بسیاری از بازیکنان این مکان را به راز Mount Chiliad و موجودات فضایی مرتبط می‌دانند."
-      }
-    ]
-  },
-
-  /* ======================================================
-       MAP
-    ======================================================= */
-
-  {
-    id: 20,
-    category: "map",
-    title: "نقشه کامل بازی با تمام مکان های مهم",
-    images: ["images/mys/GTAV-map-full.jpg"],
-    isMap: true,
-    description: "شامل تمام بخش‌های رازآلود بازی",
-    sections: [
-      {
-        title: "نقشه",
-        text: ""
-      }
-    ]
-  },
-
-  /* ======================================================
-       GTA V CHEAT CODES - همه رمزها در یک مقاله
-    ======================================================= */
-
-  {
-    id: 100,
-    category: "cheats",
-    title: "همه کدها و رمزهای GTA V",
-    description: "مجموعه کامل کدهای بازی GTA V برای کامپیوتر و گوشی - شامل کدهای بازیکن، سلاح، پلیس، آب و هوا و وسایل نقلیه",
-    images: ["images/cheats/cheats-logo.jpeg"],
-    sections: [
-      {
-        title: "کدهای بازیکن و توانایی‌ها",
-        text: "جاودانگی (Invincibility)\nگوشی: 1-999-724-654-5537\nکامپیوتر: PAINKILLER\nبازیکن را برای ۵ دقیقه جاودانه می‌کند\n\nسلامتی و زره کامل (Max Health & Armor)\nگوشی: 1-999-887-853\nکامپیوتر: TURTLE\nسلامتی و زره را به حداکثر می‌رساند\n\nشارژ توانایی ویژه (Recharge Special Ability)\nگوشی: 1-999-769-3787\nکامپیوتر: POWERUP\nتوانایی ویژه هر شخصیت را شارژ می‌کند\n\nپرش فوق‌العاده (Super Jump)\nگوشی: 1-999-467-8648\nکامپیوتر: HOPTOIT\nپرش خیلی بلند\n\nدویدن سریع (Fast Run)\nگوشی: 1-999-228-8463\nکامپیوتر: CATCHME\nدویدن سریع‌تر\n\nشنا سریع (Fast Swim)\nگوشی: 1-999-468-445-57\nکامپیوتر: GOTGILLS\nشنا کردن سریع‌تر\n\nسقوط از آسمان (Skyfall)\nگوشی: 1-999-759-3255\nکامپیوتر: SKYFALL\nبازیکن را به آسمان می‌برد و پرت می‌کند پایین\n\nحالت مستی (Drunk Mode)\nگوشی: 1-999-547-861\nکامپیوتر: LIQUOR\nحالت مستی"
-      },
-      {
-        title: "کدهای سلاح و مبارزه",
-        text: "همه سلاح‌ها و مهمات (Give Weapons & Ammo)\nگوشی: 1-999-866-587\nکامپیوتر: TOOLUP\nهمه سلاح‌ها و مهمات را می‌دهد\n\nمشت‌های انفجاری (Explosive Melee)\nگوشی: 1-999-468-426-37\nکامپیوتر: HOTHANDS\nمشت‌های انفجاری\n\nتیرهای انفجاری (Explosive Bullets)\nگوشی: 1-999-444-439\nکامپیوتر: HIGHEX\nتیرهای انفجاری\n\nتیرهای آتش‌زا (Flaming Bullets)\nگوشی: 1-999-462-363-4279\nکامپیوتر: INCENDIARY\nتیرهای آتش‌زا\n\nزمان آهسته هنگام نشانه‌گیری (Slow Motion Aim)\nگوشی: 1-999-332-3393\nکامپیوتر: DEADEYE\nزمان را موقع نشانه‌گیری کند می‌کند"
-      },
-      {
-        title: "کدهای پلیس و آب و هوا",
-        text: "افزایش ستاره‌های تحت تعقیب (Raise Wanted Level)\nگوشی: 1-999-384-484-83\nکامپیوتر: FUGITIVE\nستاره‌های تحت تعقیب را زیاد می‌کند\n\nکاهش ستاره‌های تحت تعقیب (Lower Wanted Level)\nگوشی: 1-999-529-937-87\nکامپیوتر: LAWYERUP\nستاره‌های تحت تعقیب را کم می‌کند\n\nتغییر آب و هوا (Change Weather)\nگوشی: 1-999-625-348-7246\nکامپیوتر: MAKEITRAIN\nآب و هوا را عوض می‌کند (۹ حالت مختلف)\n\nجاذبه ماه (Moon Gravity)\nگوشی: 1-999-356-2837\nکامپیوتر: FLOATER\nجاذبه را کم می‌کند (حالت ماه)\n\nماشین‌های لیز (Slippery Cars)\nگوشی: 1-999-766-9329\nکامپیوتر: SNOWDAY\nماشین‌ها را لیز می‌کند\n\nزمان آهسته (Slow Motion)\nگوشی: 1-999-756-966\nکامپیوتر: SLOWMO\nزمان را کند می‌کند (۳ مرحله)\n\nحالت کارگردانی (Director Mode)\nگوشی: (فقط کامپیوتر)\nکامپیوتر: JRTALENT\nحالت کارگردانی را فعال می‌کند"
-      },
-      {
-        title: "کدهای وسایل نقلیه - ماشین‌ها و هلی‌کوپتر",
-        text: "هلی‌کوپتر بازارد (Buzzard)\nگوشی: 1-999-289-9633\nکامپیوتر: BUZZOFF\nهلی‌کوپتر نظامی بازارد\n\nهواپیمای حرکات نمایشی (Stunt Plane)\nگوشی: 1-999-227-678-676\nکامپیوتر: BARNSTORM\nهواپیمای حرکات نمایشی\n\nهواپیمای کشاورزی (Duster)\nگوشی: 1-999-359-777-29\nکامپیوتر: FLYSPRAY\nهواپیمای کشاورزی\n\nماشین اسپرت Comet\nگوشی: 1-999-266-38\nکامپیوتر: COMET\nماشین اسپرت Pfister Comet\n\nماشین اسپرت Rapid GT\nگوشی: 1-999-727-434-8\nکامپیوتر: RAPIDGT\nماشین اسپرت Rapid GT\n\nلیموزین (Limousine)\nگوشی: 1-999-846-396-63\nکامپیوتر: VINEWOOD\nماشین لیموزین"
-      },
-      {
-        title: "کدهای وسایل نقلیه - کامیون، موتور و دوچرخه",
-        text: "کامیون زباله (Trashmaster)\nگوشی: 1-999-872-7433\nکامپیوتر: TRASHED\nکامیون زباله\n\nگاری گلف (Caddy)\nگوشی: 1-999-465-346-1\nکامپیوتر: HOLEIN1\nگاری گلف\n\nموتور آفرود Sanchez\nگوشی: 1-999-633-762-49\nکامپیوتر: OFFROAD\nموتور آفرود Sanchez\n\nموتور PCJ-600\nگوشی: 1-999-762-538\nکامپیوتر: ROCKET\nموتور Shitzu PCJ-600\n\nدوچرخه BMX\nگوشی: 1-999-226-348\nکامپیوتر: BANDIT\nدوچرخه BMX\n\nچتر نجات (Parachute)\nگوشی: 1-999-759-3483\nکامپیوتر: SKYDIVE\nچتر نجات می‌دهد"
-      },
-      {
-        title: "کدهای وسایل نقلیه ویژه",
-        text: "هواپیمای آبی Dodo\nگوشی: 1-999-398-4628\nکامپیوتر: EXTINCT\nهواپیمای آبی (بعد از Seaplane Challenge)\n\nزیردریایی Kraken\nگوشی: 1-999-282-2537\nکامپیوتر: BUBBLES\nزیردریایی (بعد از Wildlife Photography Challenge)\n\nماشین زره‌پوش Duke O'Death\nگوشی: 1-999-332-842-27\nکامپیوتر: DEATHCAR\nماشین زره‌پوش (بعد از Duel Challenge)"
-      }
-    ]
-  },
-
-/* ======================================================
-       GTA V CHARACTERS - هر شخصیت در یک مقاله جداگانه
-    ======================================================= */
-
+const charactersArticles = [
   {
     id: 200,
     category: "characters",
@@ -392,7 +28,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 201,
     category: "characters",
@@ -422,7 +57,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 202,
     category: "characters",
@@ -452,7 +86,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 203,
     category: "characters",
@@ -478,7 +111,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 204,
     category: "characters",
@@ -504,7 +136,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 205,
     category: "characters",
@@ -530,7 +161,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 206,
     category: "characters",
@@ -556,7 +186,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 207,
     category: "characters",
@@ -582,7 +211,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 208,
     category: "characters",
@@ -608,7 +236,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 209,
     category: "characters",
@@ -634,7 +261,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 210,
     category: "characters",
@@ -656,7 +282,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 213,
     category: "characters",
@@ -678,7 +303,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 214,
     category: "characters",
@@ -700,7 +324,6 @@ const articles = [
       }
     ]
   },
-
   {
     id: 215,
     category: "characters",
@@ -723,3 +346,4 @@ const articles = [
     ]
   }
 ];
+

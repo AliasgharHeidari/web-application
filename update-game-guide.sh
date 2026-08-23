@@ -2134,7 +2134,7 @@ const articles = [
 
         title: "Fire Dragon",
 
-        image: "images/fire-dragon.jpg.svg",
+        image: "images/mys/fire-dragon.jpg.svg",
 
         description:
             "Everything you need to know about defeating the Fire Dragon.",
@@ -2174,7 +2174,7 @@ const articles = [
 
         title: "Ancient Sword",
 
-        image: "images/ancient-sword.jpg.svg",
+        image: "images/mys/ancient-sword.jpg.svg",
 
         description:
             "A powerful sword with high damage and excellent range.",
@@ -2207,7 +2207,7 @@ const articles = [
 
         title: "The Hunter",
 
-        image: "images/hunter.jpg.svg",
+        image: "images/mys/hunter.jpg.svg",
 
         description:
             "A ranged character focused on mobility and critical attacks.",
